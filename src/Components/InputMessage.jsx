@@ -15,7 +15,7 @@ const InputMessage = () => {
     try {
       setMessages("");
       const response = await axios.post(
-        `http://localhost:4000/api/message/send/${selectedUser._id}`,
+        `https://chatappbackend-production-9d4d.up.railway.app/api/message/send/${selectedUser._id}`,
         { messages },
         { withCredentials: true }
       );

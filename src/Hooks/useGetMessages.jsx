@@ -11,7 +11,7 @@ const useGetMessages = () => {
       if (selectedUser) {
         try {
           const response = await axios.get(
-            `http://localhost:4000/api/message/get/${selectedUser?._id}`,
+            `https://chatappbackend-production-9d4d.up.railway.app/api/message/get/${selectedUser?._id}`,
             { withCredentials: true }
           );
           if (response.status === 200) {

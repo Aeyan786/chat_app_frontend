@@ -7,6 +7,8 @@ import { useDispatch, useSelector } from "react-redux";
 import io from "socket.io-client";
 import { setOnlineUsers } from "./Redux/userSlice";
 import { setSocket } from "./Redux/socketSlice";
+import ProtectedRoute from "./ProtectedRoutes/ProtectedRoute";
+import UserRoutes from "./ProtectedRoutes/userRoutes";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -14,7 +16,7 @@ const App = () => {
 
   useEffect(() => {
     if (authUser) {
-      const socketio = io("http://localhost:4000", {
+      const socketio = io("https://chatappbackend-production-9d4d.up.railway.app/", {
         query: {
           userId: authUser?.id,
         },
@@ -33,9 +35,30 @@ const App = () => {
   return (
     <div className="flex justify-center items-center p-4 h-screen">
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/login" element={<Login />} />
+        <Route
+          path="/home"
+          element={
+            <ProtectedRoute>
+              <Home />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/signup"
+          element={
+            <UserRoutes>
+              <Signup />
+            </UserRoutes>
+          }
+        />
+        <Route
+          path="/"
+          element={
+            <UserRoutes>
+              <Login />
+            </UserRoutes>
+          }
+        />
       </Routes>
     </div>
   );

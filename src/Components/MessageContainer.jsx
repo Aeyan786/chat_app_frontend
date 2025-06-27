@@ -18,7 +18,6 @@ const MessageContainer = () => {
     <div className="flex flex-col h-[80vh] max-h-screen w-full">
       {selectedUser ? (
         <>
-          {/* Header */}
           <div className="flex items-center justify-between bg-zinc-500 text-white p-3 rounded-t-2xl">
             <div className="flex items-center gap-4">
               <div className="avatar">
@@ -31,7 +30,6 @@ const MessageContainer = () => {
               </h1>
             </div>
 
-            {/* Back Button (Mobile only) */}
             <div className="block [@media(min-width:751px)]:hidden">
               <button
                 onClick={handleClose}
@@ -43,12 +41,10 @@ const MessageContainer = () => {
             </div>
           </div>
 
-          {/* Scrollable Messages */}
           <div className="flex-1 overflow-y-auto px-4 py-2 bg-white/5">
             <Messages />
           </div>
 
-          {/* Input stays fixed at bottom */}
           <div className="w-full">
             <InputMessage />
           </div>

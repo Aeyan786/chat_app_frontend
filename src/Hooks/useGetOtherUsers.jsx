@@ -8,7 +8,7 @@ const useGetOtherUsers = () => {
   useEffect(() => {
     const fetchOtherUsers = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/api/user/get", {
+        const response = await axios.get("https://chatappbackend-production-9d4d.up.railway.app/api/user/get", {
           withCredentials: true,
         });
         if (response.status === 200) {

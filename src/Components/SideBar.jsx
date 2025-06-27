@@ -32,7 +32,7 @@ const SideBar = () => {
   const handleLogout = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:4000/api/user/logout",
+        "https://chatappbackend-production-9d4d.up.railway.app/api/user/logout",
         { withCredentials: true }
       );
       if (response.status === 200) {

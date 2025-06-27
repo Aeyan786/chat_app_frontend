@@ -20,7 +20,7 @@ const Signup = () => {
     try {
       setLoading(true);
       const respnonse = await axios.post(
-        "http://localhost:4000/api/user/register",
+        "https://chatappbackend-production-9d4d.up.railway.app/api/user/register",
         user
       );
       if (respnonse.status === 200) {
@@ -120,7 +120,7 @@ const Signup = () => {
           </button>
         )}
         <span className="text-white text-sm">
-          <Link to="/login">Already have an account?</Link>
+          <Link to="/">Already have an account?</Link>
         </span>
       </form>
     </div>

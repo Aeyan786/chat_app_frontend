@@ -20,14 +20,14 @@ const Login = () => {
     try {
       setLoading(true)
       const response = await axios.post(
-        "http://localhost:4000/api/user/login",
+        "https://chatappbackend-production-9d4d.up.railway.app//api/user/login",
         user,{withCredentials:true}
       );
       if ((response.status === 200)) {
         toast.success("Logged In Successfully");
         dispatch(setAuthUser(response.data))
         
-        navigate("/")
+        navigate("/home")
       }
     } catch (error) {
       console.log(error);
