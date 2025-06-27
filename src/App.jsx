@@ -8,7 +8,7 @@ import io from "socket.io-client";
 import { setOnlineUsers } from "./Redux/userSlice";
 import { setSocket } from "./Redux/socketSlice";
 import ProtectedRoute from "./ProtectedRoutes/ProtectedRoute";
-import UserRoutes from "./ProtectedRoutes/userRoutes";
+import UserRoutes from "./ProtectedRoutes/UserRoutes";
 
 const App = () => {
   const dispatch = useDispatch();
