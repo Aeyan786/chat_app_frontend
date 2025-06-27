@@ -25,7 +25,7 @@ const Signup = () => {
       );
       if (respnonse.status === 200) {
         toast.success(respnonse.data.message);
-        navigate("/login")
+        navigate("/")
       }
     } catch (error) {
       console.log(error);
