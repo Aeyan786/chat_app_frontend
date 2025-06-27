@@ -20,7 +20,7 @@ const Login = () => {
     try {
       setLoading(true)
       const response = await axios.post(
-        "https://chatappbackend-production-9d4d.up.railway.app//api/user/login",
+        "https://chatappbackend-production-9d4d.up.railway.app/api/user/login",
         user,{withCredentials:true}
       );
       if ((response.status === 200)) {
