@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+body{
+    background-image: url("./assets/bg-img.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-attachment: fixed;
+    overflow: hidden;
+}
