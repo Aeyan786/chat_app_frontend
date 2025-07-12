@@ -19,8 +19,9 @@ Users can sign up, log in, and chat in real-time with other registered users.
 
 ## 🌐 Live Demo
 
-Frontend is deployed on **Vercel**  
-🔗 [chat-frontend.vercel.app](https://chat-app-frontend-peach-nine.vercel.app) *(replace with actual link)*
+- Backend is deployed on **Railway**
+- Frontend is deployed on **Vercel**  
+🔗 [chat-frontend.vercel.app](https://chat-app-frontend-peach-nine.vercel.app) 
 
 ## ⚙️ Getting Started
 
